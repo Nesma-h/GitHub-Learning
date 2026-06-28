@@ -34,6 +34,11 @@ Git → Distributed Version Control System
 | 2 | **Repository (Repo)** | المكان اللي بيتخزن فيه تاريخ المشروع بالكامل (الـ commits والتاريخ) |
 | 3 | **Staging Area** | منطقة وسيطة بتجمع فيها التعديلات اللي عايز تضمها للـ commit الجاي |
 
+
+```
+Repo -> جزء داخل ال Working Directory
+واسمه .git
+```
 ### متطلبات Git (Git Requirements)
 لإدارة أي مشروع، Git محتاج يحقق 3 أساسيات:
 
