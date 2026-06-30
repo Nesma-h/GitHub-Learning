@@ -141,12 +141,23 @@ git init
 
 ## 📜 Version History
 
+### `git commit --am`
+ — بيعمل add و commit في سطر واحد .
+
+```bash
+git commit --am
+```
+
 ### `git commit --amend`
 بيعدّل آخر Commit بدل ما يعمل Commit جديد — يفيد لو نسيتي ملف أو غلطتي في الرسالة.
 
 ```bash
 git commit --amend
 ```
+
+### `git log`
+ —  عشان اشوف كل التعديلات .
+
 
 ### `git reset HEAD~1`
 بيرجع بالمشروع خطوة لورا (يلغي آخر Commit)، مع خيارات حسب اللي عايزاه يحصل للتعديلات:
