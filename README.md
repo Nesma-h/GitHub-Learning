@@ -125,6 +125,43 @@ git init
 
 ---
 
+
+## 🗑️ Undoing Things
+
+### `git rm --cached <file name>`
+بيشيل الملف من الـ **Staging Area** بس (مش من الـ Working Directory)، يعني الملف بيرجع **Untracked** تاني.
+
+### `git restore <file name>`
+بيرجّع الملف لآخر نسخة محفوظة منه (Discard التعديلات اللي لسه مش متضافة).
+
+### `git restore --staged <file name>`
+بيرجّع الملف من الـ **Staging** للـ **Working Directory** من غير ما يمسح التعديلات.
+
+---
+
+## 📜 Version History
+
+### `git commit --amend`
+بيعدّل آخر Commit بدل ما يعمل Commit جديد — يفيد لو نسيتي ملف أو غلطتي في الرسالة.
+
+```bash
+git commit --amend
+```
+
+### `git reset HEAD~1`
+بيرجع بالمشروع خطوة لورا (يلغي آخر Commit)، مع خيارات حسب اللي عايزاه يحصل للتعديلات:
+
+| الأمر | الوظيفة |
+|------|---------|
+| `git reset --soft HEAD~1` | يلغي آخر Commit، والتعديلات بترجع للـ **Staging** |
+| `git reset --mixed HEAD~1` *(default)* | يلغي آخر Commit، والتعديلات بترجع للـ **Working Directory** فقط |
+| `git reset --hard HEAD~1` | يلغي آخر Commit **ويمسح** التعديلات نهائيًا ⚠️ |
+
+### `git diff`
+بيوضّح الفرق (Difference) بين نسختين من الملف — يعني التعديلات اللي حصلت بالظبط، سطر بسطر.
+
+---
+
 ## 🗂️ Summary Diagram
 
 ```
